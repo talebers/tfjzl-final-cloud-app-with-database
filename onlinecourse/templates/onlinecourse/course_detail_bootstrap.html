@@ -15,7 +15,6 @@
             <p>{{ course.description }}</p>
         </div>
     </div>
-
     <div class="row">
         <div class="col-12">
             <h3>Lessons</h3>
@@ -29,41 +28,6 @@
             {% endfor %}
         </div>
     </div>
-
-    {% if request.user.is_authenticated %}
-    <div class="row">cat > /home/project/tfjzl-final-cloud-app-with-database/onlinecourse/templates/onlinecourse/course_detail_bootstrap.html << 'EOF'
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>{{ course.name }}</title>
-</head>
-<body>
-<div class="container">
-    <div class="row justify-content-left">
-        <div class="col-12">
-            <h2>{{ course.name }}</h2>
-            <p>{{ course.description }}</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12">
-            <h3>Lessons</h3>
-            {% for lesson in course.lesson_set.all %}
-            <div class="card mb-2">
-                <div class="card-body">
-                    <h5 class="card-title">{{ lesson.title }}</h5>
-                    <p class="card-text">{{ lesson.content }}</p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
     {% if request.user.is_authenticated %}
     <div class="row">
         <div class="col-12">

@@ -60,8 +60,8 @@ def logout_request(request):
 
 
 def index(request):
-    courses = Course.objects.all()
-    context = {'courses': courses}
+    course_list = Course.objects.all()
+    context = {'course_list': course_list}
     return render(request, 'onlinecourse/course_list_bootstrap.html', context)
 
 
